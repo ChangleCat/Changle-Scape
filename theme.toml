@@ -1,10 +1,10 @@
-name = 'Theme name'
+name = 'Changle-Scape'
 license = 'MIT'
 licenselink = 'https://github.com/owner/repo/LICENSE'
-description = 'Theme description'
+description = 'Modified from Hugo-Landscape'
 
 # The home page of the theme, where the source can be found
-homepage = 'https://github.com/owner/repo'
+homepage = 'https://github.com/ChangleCat/Changle-Scape'
 
 # If you have a running demo of the theme
 demosite = 'https://owner.github.io/repo'
@@ -16,11 +16,11 @@ features = ['unocss', 'swup']
 
 # If the theme has a single author
 [author]
-  name = '恐咖兵糖'
-  homepage = 'https://www.ftls.xyz'
+  name = 'Changle_cat'
+  homepage = ''
 
 # If porting an existing theme
 [original]
-  author = 'Name of original author'
-  homepage = 'Website of original author'
-  repo = 'https://github.com/owner/repo'
+  author = '恐咖兵糖'
+  homepage = 'https://www.ftls.xyz'
+  repo = 'https://github.com/kkbt0/Hugo-Landscape'

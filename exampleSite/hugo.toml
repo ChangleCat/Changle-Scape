@@ -1,27 +1,28 @@
 baseURL = 'https://kkbt0.github.io/Hugo-Landscape/'
 # baseURL = 'https://example.org/public/'
 languageCode = 'zh-CN'
-title = 'Hugo-Landscape'
+title = 'Changle-Scape'
 theme = "../.."
 enableRobotsTXT = true
 
 [params.author]
-name = "恐咖兵糖"
-homepage ="https://www.ftls.xyz"
-description = "浮生若梦，为欢几何"
+  name = "Changle_cat"
+  # homepage ="https://www.ftls.xyz"
+  homepage ="/"
+  description = "浮生若梦，为欢几何"
 
 [params]
-  title = "Hugo-Landscape"
+  title = "Changle-Scape"
   description = "我们的征途是星辰大海！"
   banner = "https://www.dmoe.cc/random.php"
   announcement = "这里是announcement"
   establishYear = 2025
 
 [taxonomies]
-author = "authors"
-category = "categories"
-tag = "tags"
-series = "series"
+  author = "authors"
+  category = "categories"
+  tag = "tags"
+  series = "series"
 
 [markup.goldmark.renderer]
     hardWraps = true

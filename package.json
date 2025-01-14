@@ -1,7 +1,7 @@
 {
-  "name": "Hugo-Landscape",
+  "name": "changle-scape",
   "version": "0.1.0",
-  "description": "Hugo Theme Hugo-Landscape",
+  "description": "Hugo Theme Changle-Scape",
   "main": "index.js",
   "scripts": {
     "dev": "unocss \"layouts/**/*.html\" -o ./assets/css/uno.css --watch",
@@ -11,7 +11,7 @@
     "Hugo",
     "Theme"
   ],
-  "author": "恐咖兵糖",
+  "author": "Changle_cat",
   "license": "MIT",
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.31",
