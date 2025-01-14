@@ -14,6 +14,8 @@ description = "浮生若梦，为欢几何"
   title = "Hugo-Landscape"
   description = "我们的征途是星辰大海！"
   banner = "https://www.dmoe.cc/random.php"
+  announcement = "这里是announcement"
+  establishYear = 2025
 
 [taxonomies]
 author = "authors"

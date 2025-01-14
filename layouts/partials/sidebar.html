@@ -6,6 +6,27 @@
     <div class="flex flex-col w-full gap-4 top-4 sticky">
         <!-- <Categories class="onload-animation" style="animation-delay: 150ms">Categories</Categories>
         <Tag class="onload-animation" style="animation-delay: 200ms">Tag</Tag> -->
+        {{if ne .Site.Params.Announcement ""}}
+        <widget-layout id="announcement-widget" class="pb-4 card-base ">
+            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
+                before:content-['']
+                before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
+                before:absolute before:left-[-16px] before:top-[5.5px]">
+                Announcement
+            </div>
+            <div id="announcement" class="collapse-wrapper px-4 overflow-hidden "> <!-- class collapsed-->
+                {{ partial "sidebar/announcement.html" . }}
+            </div>
+        {{end}}
+            <!-- TODO 展开 -->
+            <!-- <div class="expand-btn px-4 -mb-2">
+                <button class="btn-plain w-full h-9 rounded-lg border-none">
+                    <div class="text-[var(--primary)] flex items-center justify-center gap-2 -translate-x-2">
+                        ...
+                    </div>
+                </button>
+            </div> -->
+        </widget-layout>
 
         <widget-layout id="categories-widget" class="pb-4 card-base ">
             <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
@@ -31,7 +52,7 @@
             <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
                 before:content-['']
                 before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
-                before:absolute before:left-[-16px] before:top-[5.5px]">Tag</div>
+                before:absolute before:left-[-16px] before:top-[5.5px]">Tags</div>
             <div id="tags" class="collapse-wrapper px-4 overflow-hidden">
                 {{ partial "sidebar/tags.html" . }}
             </div>
