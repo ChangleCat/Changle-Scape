@@ -4,9 +4,15 @@
 // TailwindCSS Reset
 @import "base/tailwind";
 
+// lxgw bright字体
+@import url("https://gcore.jsdelivr.net/gh/chlorine3545/customcdn@36b2e8f/fonts/LXGWBright-Regular/result.css");
+
 // Color 和基础 class
 @import "base/base";
 
-@import "page/medium-zoom"
+@import "page/medium-zoom";
 
 // User CSS
+html{
+    font-size: 18px !important;
+}
