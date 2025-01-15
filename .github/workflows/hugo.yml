@@ -48,7 +48,7 @@ jobs:
           uses: peaceiris/actions-gh-pages@v4
           with:
               PERSONAL_TOKEN: ${{ secrets.TOKEN }}
-              EXTERNAL_REPOSITORY: ChangleCat/Changle-Scape
+              EXTERNAL_REPOSITORY: ChangleCat/ChangleCat.github.io
               PUBLISH_BRANCH: master
               PUBLISH_DIR: ./exampleSite/public
               commit_message: auto deploy
