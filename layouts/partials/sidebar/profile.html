@@ -9,7 +9,8 @@
         </div>
         <div class="mx-auto lg:w-full h-full lg:mt-0 overflow-hidden relative">
             <div class="transition absolute inset-0 dark:bg-black/10 bg-opacity-50 pointer-events-none"></div>
-            <img src="{{ relURL "img/avatar.webp" }}" alt="Profile Image of the Author" class="w-full h-full object-center object-cover mx-auto lg:w-full h-full lg:mt-0" />
+            {{ $avatarPath := default "img/avatar.webp" .Site.Params.avatarPath }}
+            <img src="{{ relURL $avatarPath }}" alt="Profile Image of the Author" class="w-full h-full object-center object-cover mx-auto lg:w-full h-full lg:mt-0" />
         </div>
     </a>
     <div class="font-bold text-xl text-center mb-1 dark:text-neutral-50 transition">{{ .Site.Params.Author.name }}</div>

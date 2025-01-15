@@ -1,5 +1,6 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
+baseURL = 'https://changlecat.github.io/Changle-Scape'
+# baseURL = 'https://example.org/' #! 本地运行请改成这个
+languageCode = 'zh-CN'
 title = 'My New Hugo Site'
 
 [[menus.main]]
