@@ -3,6 +3,7 @@ title = "Markdown"
 categories = ["分类1"]
 tags = ["tag1"]
 slug = "md"
+date = "2024-03-01"
 
 featuredImage = "https://www.dmoe.cc/random.php"
 featuredImagePreview = "https://www.dmoe.cc/random.php"
