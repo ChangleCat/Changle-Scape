@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Changle-Scape</title><link>/</link><description>Recent content on Changle-Scape</description><generator>Hugo</generator><language>zh-CN</language><lastBuildDate>Wed, 15 Jan 2025 00:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml"/><item><title>timeline Test</title><link>/posts/timeline-test/</link><pubDate>Wed, 15 Jan 2025 00:00:00 +0000</pubDate><guid>/posts/timeline-test/</guid><description>&lt;h1 id="shortcode-timeline-example" class="headerLink">shortcode &lt;em>timeline&lt;/em> example&lt;a href="#shortcode-timeline-example" class="anchor">
+ &lt;span class="anchor-icon">#&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;ol class="relative border-s border-gray-200 dark:border-gray-700 pl-9">
+ 
+ 
+ 
+ 
+&lt;/ol></description></item><item><title>first</title><link>/posts/first/</link><pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><guid>/posts/first/</guid><description/></item><item><title>Markdown</title><link>/posts/md/</link><pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><guid>/posts/md/</guid><description>&lt;p>This is a markdown test&lt;/p></description></item><item><title>Simple Guides</title><link>/posts/guide/</link><pubDate>Fri, 01 Mar 2024 00:00:00 +0000</pubDate><guid>/posts/guide/</guid><description>&lt;blockquote>
+&lt;p>Cover image source: &lt;a href="https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/208fc754-890d-4adb-9753-2c963332675d/width=2048/01651-1456859105-(colour_1.5),girl,_Blue,yellow,green,cyan,purple,red,pink,_best,8k,UHD,masterpiece,male%20focus,%201boy,gloves,%20ponytail,%20long%20hair,.jpeg">Source&lt;/a>&lt;/p>
+&lt;/blockquote></description></item><item><title>关于</title><link>/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>/about/</guid><description>&lt;h1 id="about" class="headerLink">About&lt;a href="#about" class="anchor">
+ &lt;span class="anchor-icon">#&lt;/span>
+ &lt;/a>
+&lt;/h1>&lt;h3 id="以下内容由hugo-landscape仓库主人所写" class="headerLink">以下内容由Hugo-Landscape仓库主人所写&lt;a href="#%e4%bb%a5%e4%b8%8b%e5%86%85%e5%ae%b9%e7%94%b1hugo-landscape%e4%bb%93%e5%ba%93%e4%b8%bb%e4%ba%ba%e6%89%80%e5%86%99" class="anchor">
+ &lt;span class="anchor-icon">#&lt;/span>
+ &lt;/a>
+&lt;/h3>&lt;p>主题 Hugo-Landscape &lt;a href="https://github.com/kkbt0/Hugo-Landscape">https://github.com/kkbt0/Hugo-Landscape&lt;/a>&lt;/p>
+&lt;p>移植自 &lt;a href="https://github.com/saicaca/hexo-theme-vivia">Hexo-Theme-vivia&lt;/a> 以及 &lt;a href="https://github.com/saicaca/fuwari">Astro-Theme-Fuwari&lt;/a>&lt;br>
+部分代码参考 &lt;a href="https://github.com/HEIGE-PCloud/DoIt">Hugo-Theme-DoIt&lt;/a>&lt;br>
+而 vivia 是 Hexo Landscape 修改来的。&lt;/p>
+&lt;p>本主题缘起 Astro 主题 Fuwari 。虽然 Astro 使用 js 生态方便，但是构建速度有点慢，而且换主题很麻烦。加上想尝试 Unocss 。因此使用 Unocss 兼容 Tailwind 并使用 Swup 运行时移植到 Hugo 。&lt;/p>
+&lt;ul>
+&lt;li>CSS 55kb&lt;/li>
+&lt;li>js 34kb&lt;/li>
+&lt;/ul>
+&lt;p>之后使用 Unocss shortcuts 测试&lt;/p>
+&lt;pre tabindex="0">&lt;code>style.css 36.5 -&amp;gt; 37.1 
+&lt;/code>&lt;/pre>&lt;p>但是好消息是页面减小了一点，Swup 预加载 HTML 稍微节省一点流量。&lt;/p>
+&lt;pre tabindex="0">&lt;code>DoIt 15kb - 30kb posts
+Unocss 30kb - 50kb
+&lt;/code>&lt;/pre>&lt;p>还可以 2024.04.09&lt;/p></description></item></channel></rss>
