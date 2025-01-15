@@ -4,6 +4,8 @@ title = "关于"
 
 # About
 
+### 以下内容由Hugo-Landscape仓库主人所写
+
 主题 Hugo-Landscape https://github.com/kkbt0/Hugo-Landscape
 
 移植自 [Hexo-Theme-vivia](https://github.com/saicaca/hexo-theme-vivia) 以及 [Astro-Theme-Fuwari](https://github.com/saicaca/fuwari)
