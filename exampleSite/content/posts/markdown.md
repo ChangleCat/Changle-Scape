@@ -1,12 +1,15 @@
----
-title: "Markdown"
-categories: ["分类1"]
-tags: ["tag1"]
-slug: "md"
++++
+title = "Markdown"
+categories = ["分类1"]
+tags = ["tag1"]
+slug = "md"
 
-featuredImage: "https://www.dmoe.cc/random.php"
-featuredImagePreview: "https://www.dmoe.cc/random.php"
----
+featuredImage = "https://www.dmoe.cc/random.php"
+featuredImagePreview = "https://www.dmoe.cc/random.php"
+
+[params]
+  math = true   # 启用MathJax渲染
++++
 
 This is a markdown test 
 
@@ -222,7 +225,6 @@ $$\sum_{i=1}^n a_i=0$$
  
 $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
  
-$$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
  
 更复杂的公式:
 $$

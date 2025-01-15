@@ -17,6 +17,7 @@ enableRobotsTXT = true
   banner = "https://www.dmoe.cc/random.php"
   announcement = "这里是announcement"
   establishYear = 2025
+  math = false  # 默认不启用MathJax渲染
 
 [taxonomies]
   author = "authors"
