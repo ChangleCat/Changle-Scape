@@ -39,6 +39,10 @@ jobs:
               fetch-depth: 0
               submodules: recursive
 
+        - name: Setup Pages
+          id: pages
+          uses: actions/configure-pages@v5
+
         - name: Install Node.js dependencies
           run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
 
@@ -54,6 +58,11 @@ jobs:
             HUGO_ENVIRONMENT: production
             HUGO_ENV: production
           run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/" -s exampleSite/
+          
+        - name: Upload artifact
+          uses: actions/upload-pages-artifact@v3
+          with:
+            path: ./exampleSite/public
 
         - name: Deploy Web
           uses: peaceiris/actions-gh-pages@v4
