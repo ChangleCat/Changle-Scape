@@ -47,8 +47,6 @@ jobs:
         - name: Deploy Web
           uses: peaceiris/actions-gh-pages@v4
           with:
-              PERSONAL_TOKEN: ${{ secrets.TOKEN }}
-              EXTERNAL_REPOSITORY: ChangleCat/ChangleCat.github.io
-              PUBLISH_BRANCH: master
-              PUBLISH_DIR: ./exampleSite/public
+              github_token: ${{ secrets.TOKEN }}
+              publish_dir: ./exampleSite/public
               commit_message: auto deploy
