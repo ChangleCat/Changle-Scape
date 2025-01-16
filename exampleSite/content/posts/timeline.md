@@ -4,9 +4,10 @@ categories = ["分类1"]
 tags = ["tag1"]
 slug = "timeline-test"
 date = "2025-01-15"
+summary="timeline shortcode test"
 +++
 
-# shortcode *timeline* example
+# shortcode \<timeline\> example
 
 {{< timeline >}}
 2006.01.02
