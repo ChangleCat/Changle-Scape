@@ -1,9 +1,8 @@
 # Changle-Scape
 
-Originated from Hugo Theme Hugo-Landscape https://github.com/kkbt0/Hugo-Landscape.
+Originated from Hugo Theme Hugo-Landscape https://github.com/kkbt0/Hugo-Landscape/.
 
-No demo for now.
-Hugo-Landscape Demo https://kkbt0.github.io/Hugo-Landscape/.
+Changle-Scape Demo https://changlecat.github.io/Changle-Scape/.
 
 ## Features
 
