@@ -1,0 +1,6 @@
+{{ if and (eq .Params.comments true) (.Site.Params.twikoo.enable) }}
+<div class="border-[var(--line-divider)] border-dashed border-b-[1px] mb-5"><!-- 分割线 --></div>
+<div class="dark:text-neutral-100">
+    <div id="tcomment"></div>
+</div> 
+{{ end }}

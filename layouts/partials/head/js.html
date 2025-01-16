@@ -19,4 +19,6 @@
       <script src="{{ .RelPermalink }}"></script>
 {{- end }}
 
-
+{{if and (eq .Site.Params.twikoo.enable true) (eq .Site.Params.comments true)}}
+      <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.min.js" ></script>
+{{- end}}

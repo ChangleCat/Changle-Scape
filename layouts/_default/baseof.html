@@ -48,10 +48,24 @@ I want to make the height transition parallel with the content transition instea
 {{ partialCached "head/js.html" . }}
 <!-- <script src="https://unpkg.com/@swup/scripts-plugin@2"></script> -->
 <script data-swup-ignore-script> 
-    const swup = new Swup({
-      plugins: [new SwupPreloadPlugin()]
-    });
-    document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>init()),
-    swup.hooks.on("page:view", ()=>init())
+  const swup = new Swup({
+    plugins: [new SwupPreloadPlugin()]
+  });
+  document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>init()),
+  swup.hooks.on("page:view", ()=>init())
+
+  {{if and (eq .Site.Params.twikoo.enable true) (eq .Site.Params.comments true)}}
+  twikoo.init({
+    envId: '{{ .Site.Params.twikoo.envId }}',
+    el: '#tcomment', // 容器元素
+    // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
+    lang: 'zh-CN',
+  }).then(()=>{
+    console.log("Twikoo init complete.");
+  }).catch((err)=>{
+    console.log(err);
+  })
+  {{end}}
+  
 </script>
 </html>
