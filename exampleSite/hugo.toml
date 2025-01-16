@@ -19,6 +19,11 @@ enableRobotsTXT = true
   announcement = "这里是announcement"
   establishYear = 2025
   math = false  # 默认不启用MathJax渲染
+  comments = false
+
+[params.twikoo]
+  enable = false
+  envId = "https://blog-vercel-changle-cats-projects.vercel.app/"
 
 [taxonomies]
   author = "authors"
