@@ -1,4 +1,4 @@
-{{ if and (eq .Params.comments true) (.Site.Params.twikoo.enable) }}
+{{ if and (eq .Site.Params.comments true) (eq .Site.Params.twikoo.enable true) }}
 <div class="border-[var(--line-divider)] border-dashed border-b-[1px] mb-5"><!-- 分割线 --></div>
 <div class="dark:text-neutral-100">
     <div id="tcomment"></div>
