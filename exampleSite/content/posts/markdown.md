@@ -3,13 +3,14 @@ title = "Markdown"
 categories = ["分类1"]
 tags = ["tag1"]
 slug = "md"
-date = "2024-03-01"
+date = 2024-03-01
+draft = true
 
 featuredImage = "https://www.dmoe.cc/random.php"
 featuredImagePreview = "https://www.dmoe.cc/random.php"
 
 [params]
-  math = true   # 启用MathJax渲染
+  math = true
 +++
 
 This is a markdown test 
@@ -195,7 +196,10 @@ Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
 Bob-->Alice: I am good thanks!
 ```
- 
+Alice->Bob: Hello Bob, how are you?
+Note right of Bob: Bob thinks
+Bob-->Alice: I am good thanks!
+
 流程图:
  
 ```flow
@@ -214,27 +218,34 @@ cond(no)->op
 > - [时序图语法](http://bramp.github.io/js-sequence-diagrams/)
 > - [流程图语法](http://adrai.github.io/flowchart.js)
  
-## 5.7 MathJax 公式
+## 5.7 KaTex 公式
  
 $ 表示行内公式： 
  
-质能守恒方程可以用一个很简洁的方程式 \(E=mc^2\) 来表达。
+一个很简洁的方程式 \(\overbrace{a+b+c}^{\text{note}}\) 来表达。
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
  
-$$ 表示整行公式：
- 
+```
+$$表示整行公式：
+```
+
 $$\sum_{i=1}^n a_i=0$$
- 
+
 $$f(x_1,x_x,\ldots,x_n) = x_1^2 + x_2^2 + \cdots + x_n^2 $$
- 
- 
-更复杂的公式:
+
+$$\sum^{j-1}_{k=0}{\widehat{\gamma}_{kj} z_k}$$
+
+$$\sum_{i=0}^n i^2 = \frac{(n^2+n)(2n+1)}{6}$$
+
+#### 更复杂的公式:
 $$
-\begin{eqnarray}
-\vec\nabla \times (\vec\nabla f) & = & 0  \cdots\cdots梯度场必是无旋场\\
-\vec\nabla \cdot(\vec\nabla \times \vec F) & = & 0\cdots\cdots旋度场必是无散场\\
-\vec\nabla \cdot (\vec\nabla f) & = & {\vec\nabla}^2f\\
-\vec\nabla \times(\vec\nabla \times \vec F) & = & \vec\nabla(\vec\nabla \cdot \vec F) - {\vec\nabla}^2 \vec F\\
-\end{eqnarray}
+f(n) = 
+    \begin{cases}
+        \frac{n}{2}, & \text{if $n$ is even} \\\\
+        3n+1,        & \text{if $n$ is odd} \\\\
+    \end{cases}
 $$
- 
-访问 [MathJax](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference) 参考更多使用方法。
+
+
+访问 [KaTex](https://katex.org/docs/api) 参考更多使用方法。
