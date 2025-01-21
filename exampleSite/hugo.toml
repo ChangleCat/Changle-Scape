@@ -23,7 +23,7 @@ enableRobotsTXT = true
 
 [params.twikoo]
   enable = false
-  envId = "https://blog-vercel-changle-cats-projects.vercel.app/"
+  envId = ""
 
 [taxonomies]
   author = "authors"
