@@ -31,9 +31,17 @@ enableRobotsTXT = true
   tag = "tags"
   series = "series"
 
-[markup.goldmark.renderer]
-    hardWraps = true
     
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
 [Permalinks]
   # posts = ":year/:month/:filename"
   posts = "/posts/:slug"
