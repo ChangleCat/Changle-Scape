@@ -51,21 +51,29 @@ I want to make the height transition parallel with the content transition instea
   const swup = new Swup({
     plugins: [new SwupPreloadPlugin()]
   });
+  
+  function init() {
+    /** 每次更换页面都重载twikoo **/
+    twikoo.init({
+      envId: '{{ .Site.Params.twikoo.envId }}',
+      el: '#tcomment',
+      lang: 'zh-CN',
+      katex: {
+        delimiters: [
+          { left: '$$', right: '$$', display: true },
+          { left: '\\(', right: '\\)', display: false },
+          { left: '\\[', right: '\\]', display: true }
+        ],
+        throwOnError: false
+      }
+    }).then(()=>{
+      console.log("Twikoo init complete.");
+    }).catch((err)=>{
+      console.log(err);
+    })
+  }
+
   document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>init()),
   swup.hooks.on("page:view", ()=>init())
-
-  {{if and (eq .Site.Params.twikoo.enable true) (eq .Site.Params.comments true)}}
-  twikoo.init({
-    envId: '{{ .Site.Params.twikoo.envId }}',
-    el: '#tcomment', // 容器元素
-    // path: location.pathname, // 用于区分不同文章的自定义 js 路径，如果您的文章路径不是 location.pathname，需传此参数
-    lang: 'zh-CN',
-  }).then(()=>{
-    console.log("Twikoo init complete.");
-  }).catch((err)=>{
-    console.log(err);
-  })
-  {{end}}
-  
 </script>
 </html>
