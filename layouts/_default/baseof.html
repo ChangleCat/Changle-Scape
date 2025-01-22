@@ -70,10 +70,14 @@ I want to make the height transition parallel with the content transition instea
       console.log("Twikoo init complete.");
     }).catch((err)=>{
       console.log(err);
+    });
+    /* MediumZoom init */
+    mediumZoom('[data-zoomable]', {
+      background: 'rgba(0, 0, 0, 0.721)'
     })
   }
 
-  document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>init()),
-  swup.hooks.on("page:view", ()=>init())
+  document.readyState === "complete" ? init() : document.addEventListener("DOMContentLoaded", ()=>init());
+  swup.hooks.on("page:view", ()=>init());
 </script>
 </html>

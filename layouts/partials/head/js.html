@@ -10,15 +10,23 @@
     {{- end }}
   {{- end }}
 {{- end }}
-
+<!--
 {{- with resources.Get "js/Swup.min.js" }}
       <script src="{{ .RelPermalink }}"></script>
 {{- end }}
+ -->
+<!-- Swup -->
+<script src="https://unpkg.com/swup@4"></script>
+<script src="https://unpkg.com/@swup/preload-plugin@3"></script>
+<!-- medium-zoom -->
+<script src="https://unpkg.com/medium-zoom@1.1.0/dist/medium-zoom.min.js"> </script>
 
+<!--
 {{- with resources.Get "js/Swup.init.js" }}
       <script src="{{ .RelPermalink }}"></script>
 {{- end }}
+-->
 
 {{if and (eq .Site.Params.twikoo.enable true) (eq .Site.Params.comments true)}}
-      <script src="https://cdn.jsdelivr.net/npm/twikoo@1.6.41/dist/twikoo.min.js" ></script>
+      <script src="https://registry.npmmirror.com/twikoo/1.6.41/files/dist/twikoo.min.js" ></script>
 {{- end}}

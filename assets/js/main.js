@@ -1,10 +1,10 @@
 console.log(
-    `%c Author %c 恐咖兵糖 %c`,
+    `%c Author %c 常乐凯特 %c`,
     'background:#35495e ; padding: 1px; border-radius: 3px 0 0 3px;  color: #fff',
     'background:#41b883 ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
     'background:transparent'
 )
-console.log("恐咖兵糖的主页 https://www.ftls.xyz");
+console.log("常乐凯特的主页 ");
 
 function switchTheme() {
     if (localStorage.theme === 'dark') {
