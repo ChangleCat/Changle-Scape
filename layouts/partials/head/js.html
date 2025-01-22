@@ -16,10 +16,10 @@
 {{- end }}
  -->
 <!-- Swup -->
-<script src="https://unpkg.com/swup@4"></script>
-<script src="https://unpkg.com/@swup/preload-plugin@3"></script>
+<script src="https://unpkg.com/swup@4" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@swup/preload-plugin@3" crossorigin="anonymous"></script>
 <!-- medium-zoom -->
-<script src="https://unpkg.com/medium-zoom@1.1.0/dist/medium-zoom.min.js"> </script>
+<script src="https://unpkg.com/medium-zoom@1.1.0/dist/medium-zoom.min.js" crossorigin="anonymous"> </script>
 
 <!--
 {{- with resources.Get "js/Swup.init.js" }}
@@ -28,5 +28,5 @@
 -->
 
 {{if and (eq .Site.Params.twikoo.enable true) (eq .Site.Params.comments true)}}
-      <script src="https://registry.npmmirror.com/twikoo/1.6.41/files/dist/twikoo.min.js" ></script>
+      <script src="https://registry.npmmirror.com/twikoo/1.6.41/files/dist/twikoo.min.js" crossorigin="anonymous"></script>
 {{- end}}
