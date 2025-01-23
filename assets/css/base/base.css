@@ -6,7 +6,7 @@
 :root {
   --radius-large: 1rem;
   --banner-height-home: 60vh;
-  --banner-height: 40vh;
+  --banner-height: 50vh;
   --content-delay: .15s
 }
 
@@ -847,6 +847,10 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
+#banner-img {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0) 100%);
+}
 
 /* User CSS */
 
