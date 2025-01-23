@@ -235,7 +235,7 @@
 .bg-black\/5{background-color:rgba(0, 0, 0, 0.05);}
 .bg-gray-200{--un-bg-opacity:1;background-color:rgba(229, 231, 235, var(--un-bg-opacity));}
 .bg-gray-500{--un-bg-opacity:1;background-color:rgba(107, 114, 128, var(--un-bg-opacity));}
-.bg-green-50\/50{background-color:rgba(240, 253, 244, 0.5);}
+.bg-green-100\/100{background-color:rgba(220, 252, 231, 1);}
 .bg-white{--un-bg-opacity:1;background-color:rgba(255, 255, 255, var(--un-bg-opacity));}
 .dark .dark\:bg-black\/10{background-color:rgba(0, 0, 0, 0.1);}
 .dark .dark\:bg-gray-700{--un-bg-opacity:1;background-color:rgba(55, 65, 81, var(--un-bg-opacity));}
