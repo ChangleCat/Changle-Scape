@@ -8,11 +8,11 @@
         <Tag class="onload-animation" style="animation-delay: 200ms">Tag</Tag> -->
         {{if ne .Site.Params.Announcement ""}}
         <widget-layout id="announcement-widget" class="pb-4 card-base ">
-            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
+            <div class="flex items-center font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
                 before:content-['']
                 before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
                 before:absolute before:left-[-16px] before:top-[5.5px]">
-                Announcement
+                <div class="i-mdi-file-document-box-outline w-6 h-6 mr-1"></div><div>Announcement</div>
             </div>
             <div id="announcement" class="collapse-wrapper px-4 overflow-hidden "> <!-- class collapsed-->
                 {{ partial "sidebar/announcement.html" . }}
@@ -29,11 +29,11 @@
         </widget-layout>
 
         <widget-layout id="categories-widget" class="pb-4 card-base ">
-            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
+            <div class="flex items-center font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
                 before:content-['']
                 before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
                 before:absolute before:left-[-16px] before:top-[5.5px]">
-                Categories
+                <div class="i-mdi-category-outline w-6 h-6 mr-1"></div><div>Categories</div>
             </div>
             <div id="categories" class="collapse-wrapper px-4 overflow-hidden "> <!-- class collapsed-->
                 {{ partial "sidebar/categories.html" . }}
@@ -49,10 +49,12 @@
         </widget-layout>
 
         <widget-layout id="tags-widget" class="pb-4 card-base ">
-            <div class="font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
+            <div class="flex items-center font-bold transition text-lg text-neutral-900 dark:text-neutral-100 relative ml-8 mt-4 mb-2
                 before:content-['']
                 before:w-1 before:h-4 before:rounded-md before:bg-[var(--primary)]
-                before:absolute before:left-[-16px] before:top-[5.5px]">Tags</div>
+                before:absolute before:left-[-16px] before:top-[5.5px]">
+                <div class="i-mdi-tag-multiple-outline w-6 h-6 mr-1"></div><div>Tags</div>
+            </div>
             <div id="tags" class="collapse-wrapper px-4 overflow-hidden">
                 {{ partial "sidebar/tags.html" . }}
             </div>
