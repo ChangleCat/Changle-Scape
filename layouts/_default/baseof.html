@@ -34,7 +34,6 @@ I want to make the height transition parallel with the content transition instea
       <main id="swup" class="transition-fade">
         {{ block "main" . }}{{ end }}
       </main>
-
     </div>
 
     <div id="footer" class="grid-rows-3 col-span-2 mt-4 onload-animation">
@@ -46,14 +45,13 @@ I want to make the height transition parallel with the content transition instea
   </div>
 </body>
 {{ partialCached "head/js.html" . }}
-<!-- <script src="https://unpkg.com/@swup/scripts-plugin@2"></script> -->
 <script data-swup-ignore-script> 
   const swup = new Swup({
     plugins: [new SwupPreloadPlugin()]
   });
   
   function init() {
-    /** 每次更换页面都重载twikoo **/
+    /** twikoo init**/
     twikoo.init({
       envId: '{{ .Site.Params.twikoo.envId }}',
       el: '#tcomment',
