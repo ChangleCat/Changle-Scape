@@ -23,18 +23,18 @@
 	 bottom: 15rem;
 	 opacity: 1;
 	 cursor: pointer;
-	 transform: translateX(5rem);
+	 transform: translateX(4rem);
 }
  .back-to-top-btn i {
 	 font-size: 1.75rem;
 }
  .back-to-top-btn.hide {
-	 transform: translateX(5rem) scale(0.9);
+	 transform: translateX(4rem) scale(0.9) translateY(1rem);
 	 opacity: 0;
 	 pointer-events: none;
 }
  .back-to-top-btn:active {
-	 transform: translateX(5rem) scale(0.9);
+	 transform: translateX(4rem) scale(0.9);
 }
 </style>
 
@@ -43,13 +43,24 @@ function backToTop() {
     window.scroll({ top: 0, behavior: 'smooth' });
 }
 
+function throttle(fn, delay) {
+    let last = 0;
+    return function() {
+        let now = new Date().getTime();
+        if (now - last >= delay) {
+            last = now;
+            fn.apply(this, arguments);
+        }
+    };
+}
+
 function scrollFunction() {
     let btn = document.getElementById('back-to-top-btn');
     if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-        btn.classList.remove('hide')
+        btn.classList.remove('hide');
     } else {
-        btn.classList.add('hide')
+        btn.classList.add('hide');
     }
 }
-window.onscroll = scrollFunction
+window.onscroll = throttle(scrollFunction, 200);
 </script>
