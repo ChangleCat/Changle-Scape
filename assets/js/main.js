@@ -22,11 +22,6 @@ function switchTheme() {
 
 // 按钮脚本
 function loadButtonScript() {
-    const switchBtn = document.getElementById("scheme-switch");
-    switchBtn.addEventListener("click", function () {
-        switchTheme()
-    });
-
     // let settingBtn = document.getElementById("display-settings-switch");
     // settingBtn.addEventListener("click", function () {
     //     let settingPanel = document.getElementById("display-setting");
@@ -46,11 +41,7 @@ function loadButtonScript() {
     });
 }
 
-
-// document.addEventListener('astro:after-swap', () => {
-//     loadButtonScript();
-// }, { once: false });
-
+// 点击外部关闭
 function setClickOutsideToClose(panel, ignores) {
     document.addEventListener("click", event => {
         let panelDom = document.getElementById(panel);
@@ -97,17 +88,26 @@ function supportsOklchColor() {
     return isSupported;
 }
 
-// main
+// 初始化
 
 // 颜色
 if (!supportsOklchColor()) {
     console.log('Your browser does not support oklch color space.');
 } else {
     console.log('Your browser supports oklch color space.');
-    let hue = localStorage.getItem('hue') || 100;
+    let hue = localStorage.getItem('hue') || DEFAULT_HUE;
     setHue(hue);
+    // 设置颜色选择器的值
+    const huePalette = document.getElementById("hue-palette");
+    huePalette.value = hue;
 }
 // 主题
+if (!localStorage.theme) {
+    var isLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+    if(isLight) {
+        localStorage.theme = 'light';
+    }
+}
 if(localStorage.theme == 'light') {
     document.documentElement.classList.remove('dark');
 }
@@ -117,5 +117,6 @@ loadButtonScript();
 setClickOutsideToClose("nav-menu-panel", ["nav-menu-panel", "nav-menu-switch"]);
 setClickOutsideToClose("hue-palette-panel", ["hue-palette-panel", "hue-switch"]);
 // 暴露函数
+window.switchTheme = switchTheme;
 window.setHue = setHue;
 window.resetHue = resetHue;
