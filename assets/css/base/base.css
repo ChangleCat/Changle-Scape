@@ -439,6 +439,14 @@ strong {
   opacity: 0;
 }
 
+.float-panel.hue-palette-panel {
+  background-color: var(--card-bg);
+}
+
+.float-panel.hue-palette-panel .btn-regular {
+  color: var(--btn-content);
+}
+
 .search-panel mark {
   background-color: transparent;
   color: var(--primary);
@@ -573,45 +581,7 @@ strong {
   text-decoration-color: var(--link-active);
 }
 
-/* .text-90 {
-  color: #000000e6;
-}
 
-:is(.dark .text-90) {
-  color: #ffffffe6;
-}
-
-.text-75 {
-  color: #000000bf;
-}
-
-:is(.dark .text-75) {
-  color: #ffffffbf;
-}
-
-.text-50 {
-  color: #00000080;
-}
-
-:is(.dark .text-50) {
-  color: #ffffff80;
-}
-
-.text-30 {
-  color: #0000004d;
-}
-
-:is(.dark .text-30) {
-  color: #ffffff4d;
-}
-
-.text-25 {
-  color: #00000040;
-}
-
-:is(.dark .text-25) {
-  color: #ffffff40;
-} */
 
 html.is-changing .transition-fade {
   transition-property: all;

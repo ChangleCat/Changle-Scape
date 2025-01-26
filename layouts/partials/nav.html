@@ -14,7 +14,7 @@
         </a>
         <a aria-label="文章" href="{{ relURL "posts/" }}" class="btn-plain h-11 font-bold px-5 rounded-lg active:scale-95">
             <div class="flex items-center">
-                时间
+                归档
             </div>
         </a>
         <a aria-label="分类" href="{{ relURL "categories/" }}" class="btn-plain h-11 font-bold px-5 rounded-lg active:scale-95">
@@ -39,6 +39,9 @@
         </a>
     </div>
     <div class="flex">
+        <button aria-label="Hue Palette" class="btn-plain h-11 w-11 rounded-lg active:scale-90 border-none" id="hue-switch">
+            <div class="i-mdi-palette-outline text-xl"></div>
+        </button>
         <button aria-label="Light/Dark Mode" class="btn-plain h-11 w-11 rounded-lg active:scale-90 border-none" id="scheme-switch">
             <div class="absolute opacity-[var(--display-light-icon)] i-carbon-sun text-xl"></div>
             <div class="absolute opacity-[var(--display-dark-icon)] i-carbon-moon text-xl"></div>
@@ -47,6 +50,24 @@
             id="nav-menu-switch">
             <div class="i-mdi-menu"></div>
         </button>
+    </div>
+    <!-- Hue Palette -->
+    <div id="hue-palette-panel" class=" float-panel hue-palette-panel absolute transition-all fixed right-8 p-4 w-80 closed">
+        <div class="flex justify-between mb-3">
+            <div class="flex gap-2 items-center">
+                <label class="block text-75 text-[1.1rem] pl-4 
+                    before:content-['']
+                    before:w-1 before:h-5 before:rounded-md before:bg-[var(--primary)]
+                    before:absolute before:top-[25px] before:left-5 before:hidden md:before:block" for="hue-palette">主题颜色</label>
+                <button type="button" title="重置主题颜色" class="btn-regular w-8 h-8 flex items-center justify-center rounded-lg active:scale-90" onclick="resetHue()">
+                    <div class="i-mdi-reload"></div>
+                </button>
+            </div>
+            <div id="hue-value" class="btn-regular w-8 h-8 flex items-center text-[var(--btn-content)] rounded-lg text-[0.9rem]"></div>
+        </div>
+        <div class="flex items-center color-selection-bar rounded-[0.4rem] h-7 w-full">
+            <input type="range"  id="hue-palette" class="appearance-none w-full h-full bg-[rgba(0,0,0,0)]" min="0" max="360" step="1" oninput="setHue(this.value)">
+        </div>
     </div>
     <!-- Mobile Menu -->
     <div id="nav-menu-panel" class="float-panel closed absolute transition-all fixed right-4 px-2 py-2">

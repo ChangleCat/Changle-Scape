@@ -4,8 +4,12 @@ console.log(
     'background:#41b883 ; padding: 1px; border-radius: 0 3px 3px 0;  color: #fff',
     'background:transparent'
 )
-console.log("常乐凯特的主页 ");
+console.log("常乐凯特的主页 https://changlecat.me/");
 
+// 常量
+const DEFAULT_HUE = 30;
+
+// 主题切换
 function switchTheme() {
     if (localStorage.theme === 'dark') {
         document.documentElement.classList.remove('dark');
@@ -16,6 +20,7 @@ function switchTheme() {
     }
 }
 
+// 按钮脚本
 function loadButtonScript() {
     const switchBtn = document.getElementById("scheme-switch");
     switchBtn.addEventListener("click", function () {
@@ -28,14 +33,19 @@ function loadButtonScript() {
     //     settingPanel.classList.toggle("closed");
     // });
 
-    let menuBtn = document.getElementById("nav-menu-switch");
+    const menuBtn = document.getElementById("nav-menu-switch");
     menuBtn.addEventListener("click", function () {
         let menuPanel = document.getElementById("nav-menu-panel");
         menuPanel.classList.toggle("closed");
     });
+
+    const paletteBtn = document.getElementById("hue-switch");
+    paletteBtn.addEventListener("click", function () {
+        let palettePanel = document.getElementById("hue-palette-panel");
+        palettePanel.classList.toggle("closed");
+    });
 }
 
-loadButtonScript();
 
 // document.addEventListener('astro:after-swap', () => {
 //     loadButtonScript();
@@ -54,11 +64,9 @@ function setClickOutsideToClose(panel, ignores) {
         panelDom.classList.add("closed");
     });
 }
-setClickOutsideToClose("nav-menu-panel", ["nav-menu-panel", "nav-menu-switch"])
 
-// setClickOutsideToClose("display-setting", ["display-setting", "display-settings-switch"])
-// setClickOutsideToClose("search-panel", ["search-panel", "search-bar", "search-switch"])
 
+// 主题颜色设置
 function setHue(hue) {
     // localStorage.setItem('hue', String(hue))
     const r = document.querySelector(':root')
@@ -66,9 +74,20 @@ function setHue(hue) {
         return
     }
     r.style.setProperty('--hue', hue)
+    localStorage.setItem('hue', hue);
+    const huevle = document.getElementById("hue-value");
+    huevle.innerText = hue;
 }
 
-// 颜色改变示例
+// 重置主题颜色
+function resetHue() {
+    setHue(DEFAULT_HUE);
+
+    const huePalette = document.getElementById("hue-palette");
+    huePalette.value = DEFAULT_HUE;
+}
+
+// 检测浏览器是否支持 oklch 颜色空间
 function supportsOklchColor() {
     var div = document.createElement('div');
     div.style.color = 'oklch(0 0 0)';
@@ -78,18 +97,25 @@ function supportsOklchColor() {
     return isSupported;
 }
 
+// main
+
+// 颜色
 if (!supportsOklchColor()) {
     console.log('Your browser does not support oklch color space.');
 } else {
     console.log('Your browser supports oklch color space.');
-    let hue = 250;
-    setInterval(function () {
-        if (hue >= 360) {
-            hue = 0;
-        } else {
-            hue += 10;
-        }
-        setHue(hue);
-    }, 1000);
-
+    let hue = localStorage.getItem('hue') || 100;
+    setHue(hue);
 }
+// 主题
+if(localStorage.theme == 'light') {
+    document.documentElement.classList.remove('dark');
+}
+// 主题切换按钮
+loadButtonScript();
+// 点击外部关闭
+setClickOutsideToClose("nav-menu-panel", ["nav-menu-panel", "nav-menu-switch"]);
+setClickOutsideToClose("hue-palette-panel", ["hue-palette-panel", "hue-switch"]);
+// 暴露函数
+window.setHue = setHue;
+window.resetHue = resetHue;

@@ -19,3 +19,13 @@ html{
     font-size: 18px !important;
     scroll-behavior: smooth;
 }
+
+.appearance-none{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.color-selection-bar{
+    background: var(--color-selection-bar);
+}
