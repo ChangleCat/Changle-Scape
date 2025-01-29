@@ -56,6 +56,10 @@ I want to make the height transition parallel with the content transition instea
       envId: '{{ .Site.Params.twikoo.envId }}',
       el: '#tcomment',
       lang: 'zh-CN',
+      onCommentLoaded: () => {
+        document.querySelectorAll("#twikoo a.tk-action-link")
+          .forEach((el)=>el.removeAttribute("href"));
+      },
       katex: {
         delimiters: [
           { left: '$$', right: '$$', display: true },
