@@ -1,0 +1,17 @@
+{{ define "main"}}
+<div class="card-base flex flex-col w-full rounded-[var(--radius-large)] overflow-hidden relative mb-4 gap-4">
+    <div class="text-center text-neutral-400 font-bold transition text-8xl mt-8">404</div>
+    <div class="text-center dark:text-neutral-50 transition text-4xl mb-2">页面找不到了!</div>
+    <div class="border-[var(--line-divider)] border-dashed border-b-[1px] mb-3"></div>
+    <div class="flex flex-row justify-center gap-8 mb-8">
+        <a href="/" class="block flex items-center bg-[var(--primary)] rounded-lg p-3 text-white text-lg active:scale-[0.95] select-none transition cursor-pointer hover-transform-translate-y-[-0.25rem] dark:border-2 dark:border-[var(--primary)] shadow-lg hover-shadow-xl">
+            <div class="i-carbon-arrow-left inline-block"></div>
+            返回首页
+        </a>
+        <a href="/posts/" class="block flex items-center rounded-lg p-3 bg-[var(--btn-regular-bg)] text-lg transition active:scale-[0.95] cursor-pointer select-none hover-transform-translate-y-[-0.25rem] hover-bg-[var(--primary)] dark:text-white dark:border-2 dark:border-[var(--primary)] shadow-lg hover-shadow-xl">
+            <div class="i-carbon-document inline-block"></div>
+            浏览文章
+        </a>
+    </div>
+</div>
+{{ end }}
