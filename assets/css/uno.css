@@ -76,10 +76,10 @@
 .bottom-3{bottom:0.75rem;}
 .left-0{left:0;}
 .right-0{right:0;}
+.right-2{right:0.5rem;}
 .right-3{right:0.75rem;}
 .right-4{right:1rem;}
 .right-6{right:1.5rem;}
-.right-8{right:2rem;}
 .top-0{top:0;}
 .top-1\/2{top:50%;}
 .top-3{top:0.75rem;}
@@ -166,9 +166,10 @@
 .min-h-screen{min-height:100vh;}
 .min-w-\[2rem\]{min-width:2rem;}
 .w-\[15\%\]{width:15%;}
+.w-\[20\%\]{width:20%;}
 .w-\[3\.25rem\]{width:3.25rem;}
 .w-\[3\.75rem\]{width:3.75rem;}
-.w-\[70\%\]{width:70%;}
+.w-\[65\%\]{width:65%;}
 .w-10{width:2.5rem;}
 .w-11{width:2.75rem;}
 .w-3{width:0.75rem;}
@@ -428,6 +429,7 @@
 .md\:absolute{position:absolute;}
 .md\:bottom-3{bottom:0.75rem;}
 .md\:right-3{right:0.75rem;}
+.md\:right-8{right:2rem;}
 .md\:top-3{top:0.75rem;}
 .md\:grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr));}
 .md\:mx-0{margin-left:0;margin-right:0;}
