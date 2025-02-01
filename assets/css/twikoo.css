@@ -1,0 +1,16 @@
+/* TODO: Twikoo美化 */
+
+.tk-submit .tk-avatar {
+    display: none;
+}
+
+.tk-submit .tk-row.actions{
+    margin-left: 0;
+}
+
+.OwO.OwO-open .OwO-body {
+    display: block;
+    left: 1.5rem;
+    top: -8rem;
+    border-radius: 0.5rem;
+}
