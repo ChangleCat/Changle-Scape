@@ -8,7 +8,7 @@ enableRobotsTXT = true
 [params.author]
   name = "Changle_cat"
   # homepage ="https://www.ftls.xyz"
-  homepage =""
+  homepage ="https://changlecat.me/"
   description = "浮生若梦，为欢几何"
 
 [params]
@@ -20,6 +20,7 @@ enableRobotsTXT = true
   establishYear = 2025
   math = false  # 默认不启用MathJax渲染
   comments = false
+  keywords = "Hugo, theme, Changle-Scape"
 
 [params.twikoo]
   enable = false

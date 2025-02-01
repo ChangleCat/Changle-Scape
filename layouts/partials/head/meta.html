@@ -1,6 +1,9 @@
 {{- $params := .Scratch.Get "params" -}}
 
-<meta name="Description" content="{{ $params.description | default .Site.Params.description }}">
+<meta name="description" content="{{ $params.description | default .Site.Params.description }}">
+<meta name="author" content="{{ .Site.Params.author.name }}">
+<meta name="keywords" content="{{ .Site.Params.keywords }}">
+<meta name="language" content="{{ .Site.LanguageCode }}">
 
 {{- template "_internal/opengraph.html" . -}}
 {{- template "_internal/twitter_cards.html" . -}}

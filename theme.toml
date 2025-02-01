@@ -1,13 +1,13 @@
 name = 'Changle-Scape'
 license = 'MIT'
-licenselink = 'https://github.com/owner/repo/LICENSE'
+licenselink = 'https://github.com/ChangleCat/Changle-Scape/blob/master/LICENSE'
 description = 'Modified from Hugo-Landscape'
 
 # The home page of the theme, where the source can be found
 homepage = 'https://github.com/ChangleCat/Changle-Scape'
 
 # If you have a running demo of the theme
-demosite = 'https://owner.github.io/repo'
+demosite = 'https://changlecat.github.io/Changle-Scape/'
 
 # Taxonomy terms
 tags = ['blog']
@@ -17,7 +17,7 @@ features = ['unocss', 'swup']
 # If the theme has a single author
 [author]
   name = 'Changle_cat'
-  homepage = ''
+  homepage = 'https://changlecat.me/'
 
 # If porting an existing theme
 [original]
