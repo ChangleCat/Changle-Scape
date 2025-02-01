@@ -1,0 +1,25 @@
+{{ $type := .Get "type" | default "note" }}
+{{ $icon := dict
+    "note" "i-carbon-information"
+    "tip" "i-carbon-idea"
+    "important" "i-carbon-warning"
+    "warning" "i-carbon-warning-alt"
+    "attention" "i-carbon-warning-alt"
+    "caution" "i-carbon-warning-hex"
+}}
+{{ $color := dict 
+    "note" "blue" 
+    "tip" "green" 
+    "important" "purple" 
+    "warning" "yellow" 
+    "attention" "yellow"
+    "caution" "red" 
+}}
+<div class="my-6 rounded-lg border-l-4 p-4 border-{{ index $color $type }}-500 bg-{{ index $color $type }}-100/100 dark:bg-{{ index $color $type }}-500/10">
+    <div class="mb-2 flex items-center gap-2 font-medium pl-2 text-{{ index $color $type }}-700 dark:text-{{ index $color $type }}-300">
+        <div class="w-5 h-5 {{index $icon $type}}"></div><span>{{ title $type }}</span>
+    </div>
+    <div class="text-foreground/80 dark:text-foreground-dark/80 pl-2">
+        {{ .Inner | markdownify }}
+    </div>
+</div>

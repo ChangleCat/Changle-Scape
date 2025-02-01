@@ -4,7 +4,10 @@ import { presetUno } from "unocss"; //  预定义配置
 import { presetIcons } from "unocss"; // CSS 图标
 import { presetAttributify, presetTypography } from "unocss"; // 版式预设
 import presetLegacyCompat from '@unocss/preset-legacy-compat' // 旧版兼容预设
-// import transformerDirectives from "@unocss/transformer-directives";
+import { IconifyJSON } from '@iconify/types';
+
+import carbonIcons from '@iconify-json/carbon/icons.json';
+import mdiIcons from '@iconify-json/mdi/icons.json';
 
 export default defineConfig({
   presets: [
@@ -13,13 +16,32 @@ export default defineConfig({
     presetTypography(),
     presetIcons({
       collections: {
-        mdi: () =>
-          import("@iconify-json/mdi/icons.json").then((i) => i.default),
+        mdi: () => mdiIcons as IconifyJSON,
+        carbon: () => carbonIcons as IconifyJSON,
       },
     }),
     presetLegacyCompat({
       commaStyleColorFunction: true,
     })
+  ],safelist: [
+    'i-carbon-information',
+    'i-carbon-idea',
+    'i-carbon-warning-alt',
+    'i-carbon-warning',
+    'i-carbon-warning-hex',
+    // 'i-carbon-warning-filled',
+    // 添加颜色类
+    'bg-blue-100/100', 'border-blue-500', 'text-blue-700',
+    'bg-green-100/100', 'border-green-500', 'text-green-700',
+    'bg-purple-100/100', 'border-purple-500', 'text-purple-700',
+    'bg-yellow-100/100', 'border-yellow-500', 'text-yellow-700',
+    'bg-red-100/100', 'border-red-500', 'text-red-700',
+    // 暗色模式类
+    'dark:bg-blue-500/10', 'dark:text-blue-100', 'dark:text-blue-300',
+    'dark:bg-green-500/10', 'dark:text-green-100', 'dark:text-green-300',
+    'dark:bg-purple-500/10', 'dark:text-purple-100', 'dark:text-purple-300',
+    'dark:bg-yellow-500/10', 'dark:text-yellow-100', 'dark:text-yellow-300',
+    'dark:bg-red-500/10', 'dark:text-red-100', 'dark:text-red-300',
   ],
   shortcuts: {
     // shortcuts to multiple utilities
@@ -43,12 +65,8 @@ export default defineConfig({
     [
       /^text-(\d+)$/,
       ([, d]) => {
-        return `
-        .text-${d} { color: rgb(0 0 0 / ${parseInt(d) / 100}); }
-        :is(.dark .text-${d}) { color: rgb(255 255 255 / ${
-          parseInt(d) / 100
-        }); }
-        `;
+        return `.text-${d} { color: rgb(0 0 0 / ${parseInt(d) / 100}); }
+:is(.dark .text-${d}) { color: rgb(255 255 255 / ${parseInt(d) / 100}); }`;
       },
     ],
   ],
