@@ -7,7 +7,6 @@ enableRobotsTXT = true
 
 [params.author]
   name = "Changle_cat"
-  # homepage ="https://www.ftls.xyz"
   homepage ="https://changlecat.me/"
   description = "浮生若梦，为欢几何"
   email = "cthulhu@changlecat.me"
