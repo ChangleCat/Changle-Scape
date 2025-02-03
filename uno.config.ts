@@ -8,6 +8,7 @@ import { IconifyJSON } from '@iconify/types';
 
 import carbonIcons from '@iconify-json/carbon/icons.json';
 import mdiIcons from '@iconify-json/mdi/icons.json';
+import simpleIcons from '@iconify-json/simple-icons/icons.json';
 
 export default defineConfig({
   presets: [
@@ -18,6 +19,7 @@ export default defineConfig({
       collections: {
         mdi: () => mdiIcons as IconifyJSON,
         carbon: () => carbonIcons as IconifyJSON,
+        simple: () => simpleIcons as IconifyJSON,
       },
     }),
     presetLegacyCompat({

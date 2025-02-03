@@ -21,5 +21,29 @@
             class="btn-regular rounded-lg h-10 w-10 active:scale-90">
             <div class="i-carbon-home text-xl"></div>
         </a>
+        {{ with .Site.Params.Author.email }}
+        <a aria-label="Email" href="mailto:{{ . }}" target="_blank"
+            class="btn-regular rounded-lg h-10 w-10 active:scale-90">
+            <div class="i-carbon-email text-xl"></div>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.Author.twitterURL }}
+        <a aria-label="Twitter" href="{{ . }}" target="_blank"
+            class="btn-regular rounded-lg h-10 w-10 active:scale-90">
+            <div class="i-simple-icons-x text-xl"></div>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.Author.githubURL }}
+        <a aria-label="github" href="{{ . }}" target="_blank"
+            class="btn-regular rounded-lg h-10 w-10 active:scale-90">
+            <div class="i-simple-icons-github text-xl"></div>
+        </a>
+        {{ end }}
+        {{ with .Site.Params.Author.bilibiliURL }}
+        <a aria-label="bilibili" href="{{ . }}" target="_blank"
+            class="btn-regular rounded-lg h-10 w-10 active:scale-90">
+            <div class="i-simple-icons-bilibili text-xl"></div>
+        </a>
+        {{ end }}
     </div>
 </div>
