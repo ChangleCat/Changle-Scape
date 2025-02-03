@@ -1,6 +1,7 @@
 baseURL = 'https://changlecat.github.io/Changle-Scape'
 # baseURL = 'https://example.org/'  #! 本地运行请改成这个
 languageCode = 'zh-CN'
+hasCJKLanguage = true
 title = 'Changle-Scape'
 theme = "../.."
 enableRobotsTXT = true
