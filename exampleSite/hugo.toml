@@ -10,6 +10,10 @@ enableRobotsTXT = true
   # homepage ="https://www.ftls.xyz"
   homepage ="https://changlecat.me/"
   description = "浮生若梦，为欢几何"
+  email = "cthulhu@changlecat.me"
+  twitterURL = "https://x.com/Changle_cat"
+  gitHubURL = "https://github.com/ChangleCat"
+  bilibiliURL = "https://space.bilibili.com/313519315"
 
 [params]
   title = "Changle-Scape"
