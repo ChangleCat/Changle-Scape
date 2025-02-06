@@ -20,14 +20,13 @@ I want to make the height transition parallel with the content transition instea
     {{ partial "banner.html" . }}
   {{ end }}
   <!-- MainGridLayout -->
-  <div class="max-w-[var(--page-width)] min-h-screen grid grid-cols-[17.5rem_auto] grid-rows-[auto_auto_1fr_auto] lg:grid-rows-[auto_1fr_auto]
+  <div class="max-w-[var(--page-width)] min-h-screen grid grid-cols-[1fr_17.5rem] grid-rows-[auto_auto_1fr_auto] lg:grid-rows-[auto_1fr_auto]
     mx-auto gap-4 relative px-0 md:px-4">
     <div id="top-row" class="col-span-2 grid-rows-1 z-50 onload-animation">
       <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"> </div>
       <!-- used for onload animation -->
       {{ partial "nav.html" . }}
     </div>
-    {{ partial "sidebar.html" . }}
 
     <div id="content-wrapper" class="row-start-2 row-end-3 col-span-2 lg:col-span-1 overflow-hidden onload-animation">
       <!-- the overflow-hidden here prevent long text break the layout-->
@@ -35,6 +34,7 @@ I want to make the height transition parallel with the content transition instea
         {{ block "main" . }}{{ end }}
       </main>
     </div>
+    {{ partial "sidebar.html" . }}
 
     <div id="footer" class="grid-rows-3 col-span-2 mt-4 onload-animation">
       <footer>
@@ -47,10 +47,12 @@ I want to make the height transition parallel with the content transition instea
 {{ partialCached "head/js.html" . }}
 <script data-swup-ignore-script> 
   const swup = new Swup({
-    plugins: [new SwupPreloadPlugin()]
+    plugins: [new SwupPreloadPlugin()],
+    containers: ["#swup", "#sidebar-btm"],
   });
   
   function init() {
+    {{ if eq .Site.Params.comments true }}
     /** twikoo init**/
     twikoo.init({
       envId: '{{ .Site.Params.twikoo.envId }}',
@@ -73,6 +75,7 @@ I want to make the height transition parallel with the content transition instea
     }).catch((err)=>{
       console.log(err);
     });
+    {{ end }}
     /* MediumZoom init */
     mediumZoom('[data-zoomable]', {
       background: 'rgba(0, 0, 0, 0.721)'
