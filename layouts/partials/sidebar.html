@@ -3,7 +3,7 @@
     <div class="flex flex-col w-full mb-4">
         {{ partial "sidebar/profile.html" . }}
     </div>
-    <div id="sidebar-btm" class="md:h-[calc(100%-var(--banner-height))]">
+    <div id="swup-sidebar" class="md:h-[calc(100%-var(--banner-height))]">
         <div class="flex flex-col w-full gap-4 mb-4">
             {{ if ne .Site.Params.Announcement "" }}
             <widget-layout id="announcement-widget" class="pb-4 card-base ">

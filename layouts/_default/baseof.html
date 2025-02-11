@@ -30,7 +30,7 @@ I want to make the height transition parallel with the content transition instea
 
     <div id="content-wrapper" class="row-start-2 row-end-3 col-span-2 lg:col-span-1 overflow-hidden onload-animation">
       <!-- the overflow-hidden here prevent long text break the layout-->
-      <main id="swup" class="transition-fade">
+      <main id="swup-main" class="transition-fade">
         {{ block "main" . }}{{ end }}
       </main>
     </div>
@@ -48,7 +48,7 @@ I want to make the height transition parallel with the content transition instea
 <script data-swup-ignore-script> 
   const swup = new Swup({
     plugins: [new SwupPreloadPlugin()],
-    containers: ["#swup", "#sidebar-btm"],
+    containers: ["#swup-main", "#swup-sidebar"],
   });
   
   function init() {
