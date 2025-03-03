@@ -1,10 +1,51 @@
 <div class="card-base max-w-[var(--page-width)] min-h-[4.5rem] rounded-b-none mx-auto flex items-center px-6">
     <div class="transition text-50 text-sm">
-        ©{{ if ne now.Year .Site.Params.EstablishYear }}
-            {{ .Site.Params.EstablishYear }} - 
+        {{- $establishYear := .Site.Params.EstablishDate.Year -}}
+        {{- $nowYear := time.Now.Year -}}
+        ©{{ if ne $nowYear $establishYear }}
+            {{ $establishYear }} - 
         {{ end }}
-        {{ now.Year }} <a class="link text-[var(--primary)] font-medium" target="_blank" href="{{ .Site.Params.Author.homepage }}">{{ .Site.Params.Author.name }}</a>
-        <br>
+        {{ $nowYear }} <a class="link text-[var(--primary)] font-medium" target="_blank" href="{{ .Site.Params.Author.homepage }}">{{ .Site.Params.Author.name }}</a>
+        <div class="flex items-center">
+            <div class="i-carbon-time inline-block"></div><pre> </pre>本站已运行：<span id="blog-running-time"></span>
+        </div>
         Powered by <a class="link text-[var(--primary)] font-medium" target="_blank" href="https://gohugo.io/" rel="noopener noreferrer">Hugo</a> Theme <a class="link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/ChangleCat/Changle-Scape" rel="noopener noreferrer">Changle-Scape</a>
     </div>
 </div>
+<script>
+    function websiteRunningTime() {
+        // 网站开始运行的日期和时间 
+        const startDate = new Date("{{ .Site.Params.EstablishDate }}T17:00:00");
+      
+        function updateRunningTime() {
+          const currentDate = new Date(); 
+          const timeDiff = currentDate - startDate; // 计算时间差 (毫秒)
+      
+          const seconds = Math.floor(timeDiff / 1000) % 60;
+          const minutes = Math.floor(timeDiff / (1000 * 60)) % 60;
+          const hours = Math.floor(timeDiff / (1000 * 60 * 60)) % 24;
+          const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+      
+          // 构建要显示的字符串
+          let runningTimeStr = " ";
+          if (days > 0) {
+            runningTimeStr += days + " 天 ";
+          }
+          if (hours > 0) {
+            runningTimeStr += hours + " 小时 ";
+          }
+          if (minutes > 0) {
+            runningTimeStr += minutes + " 分 ";
+          }
+          runningTimeStr += seconds + " 秒 ";
+      
+          // 将运行时间更新到 HTML 元素中
+          document.getElementById("blog-running-time").innerHTML = runningTimeStr;
+        }
+      
+        updateRunningTime(); // 立即执行一次，避免页面加载时出现空白
+        setInterval(updateRunningTime, 1000); // 每秒更新一次
+      }
+      
+      document.addEventListener("DOMContentLoaded", websiteRunningTime);
+</script>
