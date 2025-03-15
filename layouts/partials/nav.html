@@ -27,12 +27,14 @@
                 标签
             </div>
         </a>
+        {{ if (site.GetPage "/now") }}
         <a aria-label="如今" href="{{ relURL "now/" }}" class="btn-plain h-11 font-bold px-5 rounded-lg active:scale-95">
             <div class="flex items-center">
                 如今
             </div>
         </a>
-        <a aria-label="标签" href="{{ relURL "about/" }}" class="btn-plain h-11 font-bold px-5 rounded-lg active:scale-95">
+        {{ end }}
+        <a aria-label="关于" href="{{ relURL "about/" }}" class="btn-plain h-11 font-bold px-5 rounded-lg active:scale-95">
             <div class="flex items-center">
                 关于
             </div>
