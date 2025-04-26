@@ -11,7 +11,17 @@
       {{- /* Paginate */ -}}
       {{- /* Paginate is first call on baseof.html */ -}}
       {{- range .Paginator.Pages -}}
-        {{ partial "postcard.html" . }}
+        {{- /*检查是否是自用文章，如果是，那么不在主页显示*/ -}}
+        {{- $forSelfUse := false -}}
+        {{- range .Params.categories -}}
+          {{- if eq . "自用" -}}
+            {{- $forSelfUse = true -}}
+            {{- break -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if not $forSelfUse -}}
+          {{ partial "postcard.html" . }}
+        {{- end -}}
       {{- end -}}
       {{- partial "paginator.html" . -}}
   {{- end -}}
