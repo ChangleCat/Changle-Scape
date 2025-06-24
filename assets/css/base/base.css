@@ -13,7 +13,8 @@
 
 @supports (color: oklch(0 0 0)) {
   :root {
-      --primary:oklch(.7 .14 var(--hue));
+      --primary: oklch(.7 .14 var(--hue));
+      --primary-gauss: oklch(.7 .14 calc(var(--hue) + 60deg));
       --page-bg: oklch(.95 .01 var(--hue));
       --card-bg: white;
       --btn-content: oklch(.55 .12 var(--hue));
@@ -29,25 +30,25 @@
       --enter-btn-bg-active: var(--btn-regular-bg-active);
       --deep-text: oklch(.25 .02 var(--hue));
       --title-active: oklch(.6 .1 var(--hue));
-      --line-divider: rgba(0,0,0,.08);
-      --line-color: rgba(0,0,0,.1);
-      --meta-divider: rgba(0,0,0,.2);
+      --line-divider: rgba(0, 0, 0, .08);
+      --line-color: rgba(0, 0, 0, .1);
+      --meta-divider: rgba(0, 0, 0, .2);
       --inline-code-bg: var(--btn-regular-bg);
       --inline-code-color: var(--btn-content);
       --selection-bg: oklch(.9 .05 var(--hue));
-      --codeblock-selection: oklch(.4 .08 var(--hue));
-      --codeblock-bg: oklch(.2 .015 var(--hue));
-      --license-block-bg: rgba(0,0,0,.03);
+      --codeblock-selection: oklch(.85 .05 var(--hue));
+      --codeblock-bg: oklch(.97 .005 var(--hue));
+      --license-block-bg: rgba(0, 0, 0, .03);
       --link-underline: oklch(.93 .04 var(--hue));
       --link-hover: oklch(.95 .025 var(--hue));
       --link-active: oklch(.9 .05 var(--hue));
       --float-panel-bg: white;
-      --scrollbar-bg-light: rgba(0,0,0,.4);
-      --scrollbar-bg-hover-light: rgba(0,0,0,.5);
-      --scrollbar-bg-active-light: rgba(0,0,0,.6);
-      --scrollbar-bg-dark: rgba(255,255,255,.4);
-      --scrollbar-bg-hover-dark: rgba(255,255,255,.5);
-      --scrollbar-bg-active-dark: rgba(255,255,255,.6);
+      --scrollbar-bg-light: rgba(0, 0, 0, .4);
+      --scrollbar-bg-hover-light: rgba(0, 0, 0, .5);
+      --scrollbar-bg-active-light: rgba(0, 0, 0, .6);
+      --scrollbar-bg-dark: rgba(255, 255, 255, .4);
+      --scrollbar-bg-hover-dark: rgba(255, 255, 255, .5);
+      --scrollbar-bg-active-dark: rgba(255, 255, 255, .6);
       --scrollbar-bg: var(--scrollbar-bg-light);
       --scrollbar-bg-hover: var(--scrollbar-bg-hover-light);
       --scrollbar-bg-active: var(--scrollbar-bg-active-light);
